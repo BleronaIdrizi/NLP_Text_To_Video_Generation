@@ -1,0 +1,10 @@
+pandas
+seaborn
+numpy
+matplotlib.pyplot
+gzip
+streamlit 
+bokeh
+spacy
+textacy
+en-core-web-sm
