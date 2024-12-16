@@ -14,6 +14,34 @@ colors = sns.color_palette('pastel')  # Palette for visuals
 is_processing = False
 lock = threading.Lock()  # Ensure thread-safe access to the flag
 
+def generate_video(user_prompt):
+    global is_processing
+    try:
+        # Load the TextToVideoZeroPipeline
+        model_id = "runwayml/stable-diffusion-v1-5"
+        pipe = TextToVideoZeroPipeline.from_pretrained(model_id)
+        pipe = pipe.to("cpu")  # Use CPU since CUDA is not enabled
+
+        print(f"[LOG] Generating video for prompt: {user_prompt}")
+        
+        # Generate a unique output path using datetime
+        timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        output_path = f"video_{timestamp}.mp4"
+        
+        # Generate frames
+        result = pipe(prompt=user_prompt).images
+        result = [(r * 255).astype("uint8") for r in result]
+
+        # Save video
+        imageio.mimsave(output_path, result, fps=2)  # Reduce FPS
+        print(f"[LOG] Video saved at: {output_path}")
+        st.success(f"Video saved successfully: {output_path}")
+    except Exception as e:
+        print(f"[ERROR] Failed to generate video for prompt: {user_prompt}. Error: {e}")
+        st.error(f"Error: {e}")
+    finally:
+        with lock:
+            is_processing = False  # Release the flag when processing completes
 
 def userPrompt():
     global is_processing
