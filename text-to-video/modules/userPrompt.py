@@ -2,6 +2,17 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+import torch
+import imageio
+from diffusers import TextToVideoZeroPipeline
+import datetime
+import threading  # To manage concurrent operations
+
+colors = sns.color_palette('pastel')  # Palette for visuals
+
+# Define a global flag to track if a process is running
+is_processing = False
+lock = threading.Lock()  # Ensure thread-safe access to the flag
 
 
 def userPrompt():
