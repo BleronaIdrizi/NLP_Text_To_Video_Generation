@@ -41,3 +41,16 @@ custom_css = """
     </style>
 """
 
+# Inject custom CSS with markdown
+st.markdown(custom_css, unsafe_allow_html=True)
+
+tabForPrompt, tabForSearch, tabForAbout = st.tabs(["Video generation", "Search & play videos", "About"])
+
+with tabForPrompt:
+    userPrompt()
+
+with tabForSearch:
+    searchVideos()
+
+with tabForAbout:
+    getAboutPage()
