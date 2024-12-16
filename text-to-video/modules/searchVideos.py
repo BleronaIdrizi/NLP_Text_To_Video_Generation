@@ -1,3 +1,5 @@
+import streamlit as st
+import os
 
 # Directory where videos are stored
 video_directory = "../videos"
@@ -14,3 +16,6 @@ def searchVideos():
     # Load video files
     video_files = get_video_files(video_directory)
     video_names = display_video_names(video_files)
+
+    # Streamlit app
+    st.title("Generated Videos Viewer")
