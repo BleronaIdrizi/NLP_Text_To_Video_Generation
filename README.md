@@ -36,3 +36,17 @@ Key features of the dataset:
     - Some columns, like ingredients and NER, contain data in array format. To work with these arrays, you can use the df.apply() method and the json module.
     - Duplicate values have been removed in the NER column, and all values have been standardized to lowercase for consistency.
 - **Source:** The dataset has been compiled from various online sources and published on Kaggle for use in machine learning projects and other applications.
+
+
+## Steps to fix ffmpeg path issue
+
+- The FileNotFoundError was caused because moviepy was defaulting to /usr/local/bin/ffmpeg, even though FFmpeg was installed at /opt/homebrew/bin/ffmpeg.
+- This happened because some parts of moviepy rely on hardcoded paths and did not respect the environment variable IMAGEIO_FFMPEG_EXE.
+
+### Steps to fix the issue:
+1.  Verified the Correct FFmpeg Path:
+- which ffmpeg
+- This confirmed the correct FFmpeg binary path was /opt/homebrew/bin/ffmpeg
+2. Verified FFmpeg’s availability and codecs:
+ffmpeg -version
+ffmpeg -codecs | grep libx264

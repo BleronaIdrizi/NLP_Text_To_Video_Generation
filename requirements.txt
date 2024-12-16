@@ -1,10 +1,20 @@
 pandas
 seaborn
 numpy
-matplotlib.pyplot
-gzip
-streamlit 
-bokeh
-spacy
-textacy
-en-core-web-sm
+matplotlib
+transformers 
+diffusers 
+moviepy 
+opencv-python 
+gtts
+torch
+torchvision
+torchaudio
+accelerate
+scikit-learn
+plotly
+nbformat
+ipywidgets
+streamlit
+nltk
+# pip install --upgrade imageio\[ffmpeg\]
