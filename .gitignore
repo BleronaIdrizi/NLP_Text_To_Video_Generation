@@ -163,3 +163,5 @@ cython_debug/
 files/
 videos/
 data_preparation/generated_frames/
+text-to-video/.streamlit/config.toml
+/text-to-video/generated_frames
