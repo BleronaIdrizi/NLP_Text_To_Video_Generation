@@ -50,3 +50,29 @@ Key features of the dataset:
 2. Verified FFmpeg’s availability and codecs:
 ffmpeg -version
 ffmpeg -codecs | grep libx264
+
+## Libraries Used
+This project leverages a range of Python libraries to handle data processing, natural language interpretation, video generation, and more. Below is the categorization of the libraries used:
+
+### General-Purpose Libraries
+- **pandas:** For data manipulation and analysis, including handling the recipe dataset.
+- **numpy:** For numerical operations and handling multidimensional arrays.
+- **seaborn:** For creating visualizations to analyze and understand data trends.
+
+### Text-to-Video and Natural Language Processing (NLP) Libraries
+- **transformers:** For implementing state-of-the-art NLP models to process and interpret text descriptions.
+- **diffusers:** To utilize the Stable Diffusion model for generating high-quality images from text, which are later used for video creation.
+
+### Video and Image Handling Libraries
+- **moviepy:** For video manipulation, including combining image sequences into video clips and adding audio - overlays.
+- **cv2 (OpenCV):** For advanced image processing tasks, such as resizing and applying filters.
+
+### Text-to-Speech Libraries
+- **gTTS (Google Text-to-Speech):** For converting text descriptions into speech, which can be embedded into video outputs.
+
+### Miscellaneous Libraries
+- **os:** For managing file paths and system-level operations.
+- **json:** For parsing and manipulating JSON data structures, such as the ingredients and NER columns in the dataset.
+
+### Additional Tools
+- **ffmpeg:** Required for multimedia processing, including video encoding and audio integration.
