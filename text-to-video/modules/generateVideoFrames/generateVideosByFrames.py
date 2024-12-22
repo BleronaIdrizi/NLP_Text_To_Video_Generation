@@ -71,9 +71,7 @@ def generate_recipe_video(recipe_title, ingredients, directions):
     clip.write_videofile(video_path, codec="libx264")
     
     return video_path
-
-
-def generateVideos(df):
+def generateVideosByFrames(df):
     st.subheader("Generating Recipe Videos")
 
     # Define the base directory for generated frames and videos
