@@ -159,9 +159,11 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
+idea/
 files/
 videos/
 data_preparation/generated_frames/
 text-to-video/.streamlit/config.toml
 /text-to-video/generated_frames
+/.idea
