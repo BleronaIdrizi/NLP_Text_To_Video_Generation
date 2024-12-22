@@ -17,4 +17,5 @@ nbformat
 ipywidgets
 streamlit
 nltk
+natsort
 # pip install --upgrade imageio\[ffmpeg\]
