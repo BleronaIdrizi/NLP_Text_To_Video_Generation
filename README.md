@@ -76,7 +76,7 @@ Segmentation, Tokenization, Stop Words, Stemming, Lemmatization, POS Tagging, Fe
 ![Duplicates](images/duplicates_2.png)
 
 
-- An example that we can show is taht cake: Cherry Nut Bars is showed multople times and dataset looked tike this before:
+- An example that we can show is that cake: Cherry Nut Bars is showed multiple times and dataset looked like this before:
 
 ![Duplicates](images/duplicates_3.png)
 
