@@ -526,6 +526,33 @@ Here you can add user prompt to generate video
 
 ![Null Values](images/about.png)
 
+## Performance Analyze
+### CLIP-Based Text-to-Video Performance Testing 
+The goal of this test is to evaluate the alignment between generated video frames and a textual description using the CLIP (Contrastive Language-Image Pretraining) model. This ensures that the generated video accurately reflects the provided input text.
+
+Purpose of the Test:
+- Text-Video Consistency – Verify if the generated video aligns with the textual prompt.
+- Objective Metric – Use CLIP to provide an objective measure of semantic similarity between text and images.
+- Model Validation – Assess the performance of the Text-to-Video generation model.
+
+Results interpretation:
+- CLIP Similarity Score = 1.0 for all frames
+- Indicates perfect alignment between the text description and each extracted video frame.
+- High scores (close to 1) suggest that the generated video content accurately matches the provided text.
+- Lower scores (e.g., 0.4 or 0.5) would indicate a mismatch between the video and text, signaling areas for improvement.
+
+Significance of the test:
+- Content Accuracy – Ensures that video generation is not random but directly reflects the textual prompt.
+- Model Verification – Confirms that the Text-to-Video model is generating relevant content.
+- Frame Analysis – Evaluates multiple frames to confirm video consistency throughout its duration.
+
+Key Documentation Points:
+- Model Used: openai/clip-vit-base-patch32
+- Text Description: “Panda dancing in the sea with a red T-Shirt”
+- Similarity Scores: 1.0 for all frames
+- Frames Analyzed: 4
+- Outcome: Full alignment between video content and textual description.
+
 ## Steps to fix ffmpeg path issue
 
 - The FileNotFoundError was caused because moviepy was defaulting to /usr/local/bin/ffmpeg, even though FFmpeg was installed at /opt/homebrew/bin/ffmpeg.
