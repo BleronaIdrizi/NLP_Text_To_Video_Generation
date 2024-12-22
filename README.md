@@ -435,13 +435,13 @@ Example of NER (Before and After):
 
 ```python
 title,direction_segment,tokens
-Brussels Sprouts With Herbes de Provence,Wash and trim brussels sprouts.,"['Wash', 'trim', 'brussels', 'sprout', '.']"
+Famous Meatballs,Pour pineapple chunks with juice into a saucepan,"['Pour', 'pineapple', 'chunk', 'juice', 'saucepan']","[('Pour', 'NNP'), ('pineapple', 'NN'), ('chunk', 'NN'), ('juice', 'NN'), ('saucepan', 'NN')]"
 ```
 - After POS Tagging:
 
 ```python
 title,direction_segment,tokens,pos_tags
-Brussels Sprouts With Herbes de Provence,Wash and trim brussels sprouts.,"['Wash', 'trim', 'brussels', 'sprout', '.']","[('Wash', 'NNP'), ('trim', 'JJ'), ('brussels', 'NNS'), ('sprout', 'NN'), ('.', '.')]"
+Famous Meatballs,Pour pineapple chunks with juice into a saucepan,"['Pour', 'pineapple', 'chunk', 'juice', 'saucepan']","[('Pour', 'NNP'), ('pineapple', 'NN'), ('chunk', 'NN'), ('juice', 'NN'), ('saucepan', 'NN')]","Pour (INGREDIENT), pineapple (TOOL), juice (INGREDIENT), saucepan (INGREDIENT)"
 ```
 
 Benefits of NER in Recipe Analysis:
