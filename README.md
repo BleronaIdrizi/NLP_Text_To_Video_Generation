@@ -517,12 +517,12 @@ Her you can add user prompt to generate video
 ![Null Values](images/video_generation.png)
 
 #### Search & play videos
-Her you search the video generated and see the videos
+Here you search the video generated and see the videos
 
 ![Null Values](images/search_play.png)
 
 #### About
-Her you can add user prompt to generate video
+Here you can add user prompt to generate video
 
 ![Null Values](images/about.png)
 
